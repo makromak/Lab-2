@@ -1,0 +1,47 @@
+﻿## Ubuntu -> Windows: ping 10.0.2.4
+PING 10.0.2.4 (10.0.2.4) 56(84) bytes of data.
+64 bytes from 10.0.2.4: icmp_seq=1 ttl=128 time=0.236 ms
+64 bytes from 10.0.2.4: icmp_seq=2 ttl=128 time=0.256 ms
+64 bytes from 10.0.2.4: icmp_seq=3 ttl=128 time=0.233 ms
+64 bytes from 10.0.2.4: icmp_seq=4 ttl=128 time=0.317 ms
+
+--- 10.0.2.4 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3061ms
+rtt min/avg/max/mdev = 0.233/0.260/0.317/0.033 ms
+
+## Ubuntu -> internet: ping ubuntu.com
+PING ubuntu.com (185.125.190.29) 56(84) bytes of data.
+64 bytes from website-content-cache-3.ps5.canonical.com (185.125.190.29): icmp_seq=1 ttl=64 time=104 ms
+64 bytes from website-content-cache-3.ps5.canonical.com (185.125.190.29): icmp_seq=2 ttl=64 time=106 ms
+64 bytes from website-content-cache-3.ps5.canonical.com (185.125.190.29): icmp_seq=3 ttl=64 time=136 ms
+64 bytes from website-content-cache-3.ps5.canonical.com (185.125.190.29): icmp_seq=4 ttl=64 time=104 ms
+
+--- ubuntu.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 103.805/112.412/135.979/13.619 ms
+
+## Windows -> Ubuntu: ping 10.0.2.3
+
+Pinging 10.0.2.3 with 32 bytes of data:
+Reply from 10.0.2.3: bytes=32 time<1ms TTL=64
+Reply from 10.0.2.3: bytes=32 time<1ms TTL=64
+Reply from 10.0.2.3: bytes=32 time<1ms TTL=64
+Reply from 10.0.2.3: bytes=32 time<1ms TTL=64
+
+Ping statistics for 10.0.2.3:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+## Windows -> internet: ping ubuntu.com
+
+Pinging ubuntu.com [185.125.190.21] with 32 bytes of data:
+Reply from 185.125.190.21: bytes=32 time=103ms TTL=128
+Reply from 185.125.190.21: bytes=32 time=107ms TTL=128
+Reply from 185.125.190.21: bytes=32 time=141ms TTL=128
+Reply from 185.125.190.21: bytes=32 time=105ms TTL=128
+
+Ping statistics for 185.125.190.21:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 103ms, Maximum = 141ms, Average = 114ms
