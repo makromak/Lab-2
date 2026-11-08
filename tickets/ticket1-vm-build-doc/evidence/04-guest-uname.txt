@@ -1,0 +1,9 @@
+makro@makromak:~$ uname -a; lsb_release -a;ip -br a
+Linux makromak 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:28:02 UTC 2026 aarch64 GNU/Linux
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 26.04.1 LTS
+Release:        26.04
+Codename:       resolute
+lo               UNKNOWN        127.0.0.1/8 ::1/128
+enp0s1           UP             192.168.64.2/24 metric 100 fd89:c7ac:d898:bd8:7ccb:63ff:fea4:ab8d/64 fe80::7ccb:63ff:fea4:ab8d/64
