@@ -42,7 +42,7 @@ Week __ — `____` : [tools/____.md](tools/)
 
 | Assignment | Tool | What for |
 |------------|------|----------|
-| | | |
+| Ticket 1 | Claude (Anthropic) | Drafting the structure of README.md and BUILD.md from my Lab 1/Lab 2 notes |
 
 > Declaring this costs nothing. Not declaring it, when it comes up at the
 > defence, costs the assignment.
