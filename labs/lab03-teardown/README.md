@@ -1,163 +1,183 @@
 # Lab 3 — Teardown, and the same machine from the command line
 
-Pair: Kazhymurat + Arsen · Date: 04.11.2026
+**Course:** Operating System Architecture (IFT 103) · **Week 4** · **Group:** CYB26-5
 
-## Part 1 — Ten parts
+The first half is a teardown on paper: ten real products, read from their makers' own websites.
+The second half reads CPU, memory and disk facts from the command line on two operating systems — my **MacBook Air (macOS, the host)** and my **Ubuntu Server VM in UTM** — and compares how each one names the same fact.
+
+```
+labs/lab03-teardown/
+├── README.md
+└── evidence/
+    ├── photos/            ← screenshots of each maker's product page
+    ├── macos-specs.txt    ← raw output, host laptop (macOS, Apple M1)
+    └── linux-specs.txt    ← raw output, Ubuntu VM in UTM (ARM64)
+```
+
+---
+
+## Part 1 — The ten components
+
+Each part follows the same pattern: **what it is → what it connects to → what limits it**.
+Every screenshot is taken from the maker's own page, linked under each part (screenshots taken 9 Nov 2026).
 
 ### 1. AMD Ryzen 5 7600
-![AMD Ryzen 5 7600](evidence/photos/ryzen5-7600.png)
+![AMD Ryzen 5 7600 — general specifications](evidence/photos/01-ryzen5-7600.png)
 
-**What it is:** 6 cores / 12 threads, Zen 4 ("Raphael"), 3.8 GHz base, up to 5.1 GHz boost, 32 MB L3, 65 W default TDP, integrated Radeon graphics (2 cores).
-**Connects to:** socket **AM5** (boards with A620 / B650 / B650E / B840 / B850 / X670 / X670E / X870 / X870E chipsets). Its memory controller is **DDR5 only**, 2 channels. PCIe 5.0.
-**Limit:** fits only AM5 boards and only DDR5 memory (no DDR4). Official memory speed is DDR5-5200 with two modules (DDR5-3600 with four); faster kits run as an overclock profile.
-Source: https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html#product-specs
+**What it is:** desktop CPU, Zen 4 ("Raphael AM5"), 6 cores / 12 threads, 3.8 GHz base, up to 5.1 GHz boost, 32 MB L3, 65 W default TDP, built-in AMD Radeon graphics (2 cores).
+**Connects to:** socket **AM5**. AMD lists the supporting chipsets: A620, X670E, X670, **B650E, B650**, X870E, X870, B840, B850. Memory controller: **DDR5 only**, 2 channels, up to 128 GB. PCIe 5.0, 24 usable lanes.
+**Limit:** fits only AM5 boards and only DDR5. Official memory speed is **DDR5-5200** with two modules (DDR5-3600 with four) — anything faster is an overclock (EXPO). Tjmax 95 °C.
+**Maker's page:** https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html
 
 ### 2. Intel Core i5-13400
-![Intel Core i5-13400](evidence/photos/core-i5-13400.png)
+![Intel Core i5-13400 — memory specifications](evidence/photos/02-core-i5-13400.png)
+![Intel Core i5-13400 — package specifications](evidence/photos/02-core-i5-13400-b.png)
 
-**What it is:** 10 cores (6 Performance + 4 Efficient), 16 threads, P-core base 2.5 GHz, max turbo 4.6 GHz, 20 MB Intel Smart Cache, 65 W base power, integrated Intel UHD Graphics 730.
-**Connects to:** socket **FCLGA1700**. Memory controller takes **DDR5-4800 or DDR4-3200**, 2 channels (which one is used is decided by the board's slots). PCIe 5.0 and 4.0, 20 lanes.
-**Limit:** fits only LGA1700 boards. It supports both memory generations, but a given board has only one kind of slot, so the board decides.
-
-Source: (https://www.intel.com/content/www/us/en/products/sku/230495/intel-core-i513400-processor-20m-cache-up-to-4-60-ghz/specifications.html)
+**What it is:** 13th-gen Intel Core (Raptor Lake), 10 cores (6 Performance + 4 Efficient), 16 threads, P-core base 2.5 GHz, max turbo 4.6 GHz, 20 MB Intel Smart Cache, 65 W base power, integrated Intel UHD Graphics 730.
+**Connects to:** socket **FCLGA1700**. Memory: **DDR5 up to 4800 MT/s or DDR4 up to 3200 MT/s**, 2 channels, up to 192 GB — which one is used depends on the board's slots. PCIe 5.0 and 4.0, 20 lanes.
+**Limit:** LGA 1700 boards only; locked multiplier (no "K"). Intel's page gives only the thermal specification (**PCG 2020C**) and does not name a cooler; a boxed version exists (ordering code **BX8071513400**), a tray CPU comes without one.
+**Maker's page:** https://www.intel.com/content/www/us/en/products/sku/230495/intel-core-i513400-processor-20m-cache-up-to-4-60-ghz/specifications.html
 
 ### 3. ASUS PRIME B650M-A
-![ASUS PRIME B650M-A](evidence/photos/asus-b650m-a.png)
+![ASUS PRIME B650M-A — tech specs](evidence/photos/03-asus-prime-b650m-a.png)
 
-**What it is:** micro-ATX motherboard, chipset AMD B650, socket AM5.
-**Connects to:** AM5 CPU; DDR5 DIMM slots (4); 2 × M.2 (Key M, 2242/2260/2280, PCIe 4.0 x4); 4 × SATA 6 Gb/s; PCIe 4.0 x16 slot plus two PCIe 4.0 x16 slots running at x1.
-**Limit:** only AM5 processors and only DDR5. Which Ryzen generations it takes is in the CPU Support list (see Step 3).
-
-Source: (https://www.asus.com/ru/motherboards-components/motherboards/prime/prime-b650m-a/)
+**What it is:** micro-ATX motherboard, AMD **B650** chipset, socket **AM5**.
+**Connects to:** AMD Ryzen 9000 / 8000 / 7000 CPUs (up to 170 W); **4 × DDR5 DIMM**, dual channel, 4800–5200 standard, 5400/5600 only as overclock; 2 × M.2 Key M (M.2_1 runs **PCIe 5.0 x4** with a Ryzen 7000/9000, M.2_2 PCIe 4.0 x4 from the chipset); 4 × SATA 6 Gb/s; 1 × PCIe 4.0 x16 slot; DisplayPort, HDMI and VGA outputs for the CPU's graphics; 24-pin + 8-pin power.
+**Limit:** AM5 CPUs only, DDR5 only, needs a micro-ATX (or larger) case.
+**Maker's page:** https://www.asus.com/motherboards-components/motherboards/prime/prime-b650m-a/techspec/
 
 ### 4. MSI PRO B760M-A WIFI DDR4
-![MSI PRO B760M-A WIFI DDR4](evidence/photos/msi-b760m-a-wifi-ddr4.png)
+![MSI PRO B760M-A WIFI DDR4 — specification](evidence/photos/04-msi-pro-b760m-a-wifi-ddr4.png)
 
-**What it is:** micro-ATX motherboard, chipset Intel B760, socket LGA1700, Wi-Fi 6E + 2.5G LAN.
-**Connects to:** LGA1700 CPU; 4 × **DDR4** DIMM slots (dual channel, up to 128 GB); 2 × M.2 (M2_1 from the CPU, PCIe 4.0 x4; M2_2 from the chipset, PCIe 4.0 x4 or SATA mode); 4 × SATA 6 Gb/s.
-**Limit:** only LGA1700 CPUs and only DDR4: a DDR5 stick will not fit the slot.
+**What it is:** micro-ATX motherboard, Intel **B760** chipset, socket **LGA 1700**, Wi-Fi 6E and 2.5G LAN.
+**Connects to:** Intel Core 14th / 13th / 12th gen, Pentium Gold and Celeron; **4 × DDR4** (up to 128 GB, 3200 JEDEC, up to 5333 as XMP overclock); 2 × M.2 (M.2_1 from the CPU, PCIe 4.0 x4; M.2_2 from the chipset, PCIe 4.0 x4 or SATA); **4 × SATA 6G**; 2 × HDMI 2.1 and 2 × DisplayPort 1.4 (only with a CPU that has graphics); 1 × ATX_PWR + 2 × CPU_PWR.
+**Limit:** LGA 1700 only; **DDR4 only** — a DDR5 module does not fit the slot.
+**Maker's page:** https://www.msi.com/Motherboard/PRO-B760M-A-WIFI-DDR4/Specification
 
-Source: (https://www.msi.com/Motherboard/PRO-B760M-A-WIFI-DDR4/Specification)
+### 5. Kingston FURY Beast DDR5-5600, 16 GB (KF556C40BB-16)
+![Kingston FURY Beast DDR5 — KF556C40BB-16](evidence/photos/05-kingston-fury-beast-ddr5.png)
 
-### 5. Kingston FURY Beast DDR5-5600, 16 GB
-![Kingston FURY Beast DDR5](evidence/photos/kingston-fury-beast-ddr5.png)
+**What it is:** DDR5 desktop DIMM, part number **KF556C40BB-16**: 16 GB (1 × 16 GB), 5600 MT/s, timings 40-40-40, 1.25 V, 16 Gbit chips, profile type **Intel XMP** (Kingston sells the "AMD EXPO / Intel XMP" variant under a different part number).
+**Connects to:** a 288-pin DDR5 DIMM slot, one module per channel.
+**Limit:** DDR5 boards only (the notch is in a different place than on DDR4). One module = single channel. On the Ryzen 5 7600 the official speed is DDR5-5200, so 5600 is an overclock.
+**Maker's page:** https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr5-memory (5600 MT/s · 16 GB · Single Module · CL40 · 16 Gbit · Intel XMP · Black)
 
-**What it is:** DDR5 UDIMM, 16 GB (one module), 5600 MT/s (PC5-44800), CL40, 1.25 V, 288 pins, on-die ECC.
-**Connects to:** a 288-pin DDR5 DIMM slot. One module means one memory channel is used, the second stays empty.
-**Limit:** fits only DDR5 boards (the notch is in a different place than on DDR4). The speed is also capped by the CPU: the Ryzen 5 7600 officially tops out at DDR5-5200 with two modules, so 5600 is reached only through an overclock profile.
+### 6. Crucial DDR4-3200, 16 GB UDIMM (CT16G4DFRA32A)
+![Crucial 16GB DDR4-3200 UDIMM](evidence/photos/06-crucial-ddr4-3200.png)
 
-Source: https://www.kingston.com/ru/memory/gaming/kingston-fury-beast-ddr5-memory?speed=5600mt%2Fs&total%20(kit)%20capacity=16gb&kit=single%20module&cas%20latency=40&dram%20density=16gbit&profile%20type=intel%20xmp&color=black
-
-### 6. Crucial DDR4-3200, 16 GB DIMM
-![Crucial DDR4-3200](evidence/photos/crucial-ddr4-3200.png)
-
-**What it is:** DDR4 UDIMM, 16 GB, 3200 MT/s (PC4-25600), 288 pins, 1.2 V.
-**Connects to:** a 288-pin DDR4 DIMM slot, one per channel.
-**Limit:** fits only DDR4 boards. 3200 MT/s is exactly the top official DDR4 speed of the Core i5-13400.
-<!-- CHECK: I did NOT search this part, these numbers are from my own knowledge. Fill in from crucial.com (exact part number, voltage, latency) -->
-Source: TODO link to the crucial.com page
+**What it is:** DDR4 desktop UDIMM, part number **CT16G4DFRA32A**: 16 GB, DDR4-3200, CAS latency 22, single module.
+**Connects to:** a 288-pin DDR4 DIMM slot.
+**Limit:** DDR4 boards only; full-size UDIMM, so it does not fit a laptop (SO-DIMM). 3200 MT/s is exactly the i5-13400's official DDR4 speed.
+**Maker's page:** https://www.crucial.com/memory/ddr4/ct16g4dfra32a — the live page loads, but its specification section returns a 404, so the screenshot is the Wayback Machine copy of the same Crucial page (29 Dec 2025): https://web.archive.org/web/20251229164412/https://www.crucial.com/memory/ddr4/ct16g4dfra32a
 
 ### 7. Samsung 990 PRO 1 TB
-![Samsung 990 PRO](evidence/photos/samsung-990-pro.png)
+![Samsung 990 PRO — specifications](evidence/photos/07-samsung-990-pro.png)
 
-**What it is:** NVMe SSD, 1 TB, form factor M.2 2280, interface PCIe 4.0 x4 (NVMe 2.0), up to 7,450 MB/s sequential read and 6,900 MB/s write.
-**Connects to:** an M.2 Key M slot that provides PCIe lanes. No data or power cable.
-**Limit:** the bus: it runs at PCIe 4.0 x4 speed at best, and an M.2 slot that is SATA-only would not work.
-<!-- CHECK: no samsung.com page found in my search, specs are from shops (MZ-V9P1T0BW). Confirm on samsung.com -->
-Source: TODO link to the samsung.com page
+**What it is:** NVMe SSD, form factor **M.2 (2280)**, 80 × 22 × 2.3 mm, interface **PCIe Gen 4.0 x4, NVMe 2.0**, up to 7,450 MB/s read and 6,900 MB/s write, Samsung in-house controller, 1 GB LPDDR4 cache, 600 TBW warranty.
+**Connects to:** an M.2 Key M slot wired to PCIe lanes; no cables.
+**Limit:** needs an NVMe/PCIe M.2 slot (not SATA-only); it cannot use the PCIe 5.0 speed of the ASUS M.2_1 slot — it stays at Gen 4 speed.
+**Maker's page:** https://www.samsung.com/uk/memory-storage/nvme-ssd/990-pro-1tb-nvme-pcie-gen-4-mz-v9p1t0bw/
 
 ### 8. Samsung 870 EVO 1 TB
-![Samsung 870 EVO](evidence/photos/samsung-870-evo.png)
+![Samsung 870 EVO — specifications](evidence/photos/08-samsung-870-evo.png)
 
-**What it is:** SATA SSD, 1 TB, 2.5-inch.
-**Connects to:** a SATA 6 Gb/s port by a data cable and to the power supply by a SATA power cable.
-**Limit:** the SATA bus tops out at about 550 MB/s, far below an NVMe drive.
-
-Source: https://www.samsung.com/kz_ru/memory-storage/sata-ssd/870-evo-1tb-sata-3-2-5-ssd-mz-77e1t0bw/
+**What it is:** **2.5-inch SATA SSD**, 100 × 69.85 × 6.8 mm, SATA 6 Gb/s (compatible with 3 and 1.5 Gb/s), up to 560 MB/s read and 530 MB/s write, 600 TBW warranty.
+**Connects to:** a SATA port on the board (data cable) + SATA power from the PSU; sits in a 2.5" bay.
+**Limit:** the SATA bus caps it at about 560 MB/s — roughly 13 × slower than the 990 PRO.
+**Maker's page:** https://www.samsung.com/kz_ru/memory-storage/sata-ssd/870-evo-1tb-sata-3-2-5-ssd-mz-77e1t0bw/
 
 ### 9. Corsair RM750e (750 W)
-![Corsair RM750e](evidence/photos/corsair-rm750e.png)
+![Corsair RM750e — tech specs](evidence/photos/09-corsair-rm750e.png)
 
-**What it is:** ATX power supply, 750 W, 80 PLUS Gold, fully modular.
-**Connects to:** the motherboard (24-pin and CPU 8-pin), drives (SATA power), graphics card (PCIe power).
-**Limit:** total wattage, 750 W.
+**What it is:** ATX power supply, **750 W continuous**, 80 PLUS Gold, ATX12V **3.1**, fully modular (cable type 4), 140 × 150 × 86 mm.
+**Connects to:** the wall; inside — 1 × 24-pin ATX to the board, CPU power to the board's CPU_PWR, **7 × SATA** power, 4 × PATA (Molex), PCIe cables for a graphics card.
+**Limit:** 750 W total; ATX size. There is **only one**, so only one build gets it.
+**Maker's page:** https://www.corsair.com/us/en/p/psu/cp-9020262-na/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-cp-9020262-na
 
-Source: https://www.corsair.com/us/en/p/psu/cp-9020292-na/rme-series-rm750e-fully-modular-low-noise-atx-power-supply-white-na-cp-9020292-na?srsltid=AYCX9vKPkV0mtNsvs-N7qkq8QIo0WTOTqHvUVwlOBN2cK8vJPjXJdTmf
+### 10. Stock cooler — AMD Wraith Stealth
+![AMD Ryzen 5 7600 — Thermal Solution (PIB): AMD Wraith Stealth](evidence/photos/10-wraith-stealth.png)
 
-### 10. Stock cooler
-![Stock cooler](evidence/photos/wraith-stealth.png)
+**What it is:** the low-profile air cooler that ships in the Ryzen 5 7600 retail box — AMD lists **Thermal Solution (PIB): AMD Wraith Stealth** (PIB = processor in box).
+**Connects to:** the **AM5** mounting on top of the CPU; its fan plugs into CPU_FAN.
+**Limit:** sized for the 65 W CPU it ships with — fine at stock, weak for overclocking.
+**Maker's page:** same AMD page as part 1.
 
-**What it is:** AMD Wraith Stealth, the cooler that ships in the box with the Ryzen 5 7600 (AMD lists "Thermal Solution (PIB): AMD Wraith Stealth" on the product page).
-**Connects to:** the AM5 socket.
-**Limit:** it is made for a 65 W processor.
+---
 
-Source: https://www.amd.com/en/products/processors/ecosystem/cpu-cooler-solutions.html
-
-## Step 3 — The motherboards
+## Part 1b — The motherboards, and two computers that would work
 
 | | ASUS PRIME B650M-A | MSI PRO B760M-A WIFI DDR4 |
 |---|---|---|
-| Socket | AM5 | LGA1700 |
+| Socket | AM5 | LGA 1700 |
 | Chipset | AMD B650 | Intel B760 |
-| Memory | DDR5, 4 slots | DDR4, 4 slots |
-| Storage | 2 × M.2 (PCIe 4.0 x4), 4 × SATA | 2 × M.2 (PCIe 4.0 x4; M2_2 also SATA mode), 4 × SATA |
-| CPUs accepted | Ryzen 7000, 8000, 9000 | Core 12th, 13th and 14th gen, Pentium Gold, Celeron |
-| BIOS update needed? | TODO from the CPU Support list | TODO from the CPU Support list |
+| Memory | DDR5, 4 × DIMM | DDR4, 4 × DIMM |
+| Storage | 2 × M.2 (Gen 5 x4 + Gen 4 x4), 4 × SATA | 2 × M.2 (Gen 4 x4, M2_2 also SATA), 4 × SATA |
+| CPUs accepted | Ryzen 9000, 8000, 7000 | Core 14th, 13th, 12th gen, Pentium Gold, Celeron |
+| BIOS for our CPU | ASUS CPU support list: Ryzen 5 7600 validated **since BIOS 0602** — check the BIOS version is 0602 or newer | MSI CPU support list: i5-13400 listed with BIOS **7D99v10** (the earliest one listed) — no update needed |
 
-<!-- CHECK: fill the last row from the "CPU support" list of each board. Ryzen 5 7600 is 7000-series, Core i5-13400 is 13th gen: say whether the list shows a minimum BIOS version for them -->
+BIOS sources: [ASUS CPU support](https://www.asus.com/motherboards-components/motherboards/prime/prime-b650m-a/helpdesk_qvl_cpu?model2Name=PRIME-B650M-A) · [MSI CPU support](https://www.msi.com/Motherboard/PRO-B760M-A-WIFI-DDR4/support#cpu)
 
-## Two builds
+The rule: **CPU socket = board socket**, and **memory type = what the board's slots take**.
 
-### Build 1 — AMD
+| Part | Build A — AMD | Why here | Build B — Intel | Why here |
+|---|---|---|---|---|
+| CPU | Ryzen 5 7600 | AM5 CPU | Core i5-13400 | LGA 1700 CPU |
+| Motherboard | ASUS PRIME B650M-A | AM5; B650 is on AMD's chipset list | MSI PRO B760M-A WIFI DDR4 | LGA 1700; 13th gen on MSI's list |
+| Memory | Kingston FURY Beast DDR5-5600 | board and CPU are DDR5-only; runs at 5200 officially, 5600 as an overclock | Crucial DDR4-3200 | board is DDR4-only; 3200 = the CPU's official DDR4 speed |
+| Storage | Samsung 990 PRO (M.2 NVMe) | M.2 Key M slot with PCIe lanes, no cables | Samsung 870 EVO (SATA) | board has 4 × SATA 6G |
+| Cooler | Wraith Stealth (in the CPU box) | AM5 mounting, 65 W | Intel boxed cooler — only if the i5 is bought boxed (BX8071513400) | the parts list has only one cooler, and it is AMD's |
+| PSU | Corsair RM750e | 24-pin + CPU power; far more than this build needs | **missing** | — |
+| Graphics | Radeon iGPU in the CPU | board has DP / HDMI / VGA | UHD 730 iGPU in the CPU | board has HDMI / DP |
 
-| Part | Model | Why it fits here |
-|---|---|---|
-| Processor | AMD Ryzen 5 7600 | needs socket AM5 |
-| Motherboard | ASUS PRIME B650M-A | has socket AM5, B650 chipset is in the 7600's supported list |
-| Memory | Kingston FURY Beast DDR5-5600 16 GB | the 7600 and this board are DDR5 only |
-| SSD | Samsung 990 PRO 1 TB | M.2 Key M slot with PCIe 4.0 x4 matches the drive's interface |
-| Power | Corsair RM750e | has the 24-pin and CPU 8-pin the board needs; 750 W is far more than a 65 W CPU with integrated graphics needs |
-| Cooler | AMD Wraith Stealth | ships with the 7600, AM5 mounting |
+**What each build still needs**
 
-### Build 2 — Intel
+- **Build A (AMD):** a micro-ATX case, an operating system. A second DDR5 module would add the second memory channel.
+- **Build B (Intel):** **a power supply** (the only PSU went to Build A), a SATA data cable for the 870 EVO, a cooler if the CPU is a tray version, a micro-ATX case, an operating system. A second DDR4 module for dual channel.
 
-| Part | Model | Why it fits here |
-|---|---|---|
-| Processor | Intel Core i5-13400 | needs socket LGA1700 |
-| Motherboard | MSI PRO B760M-A WIFI DDR4 | has LGA1700, takes 13th gen |
-| Memory | Crucial DDR4-3200 16 GB | the board has only DDR4 slots; 3200 is the CPU's DDR4 maximum |
-| SSD | Samsung 870 EVO 1 TB | the board has 4 SATA ports; 2.5-inch SATA drive |
-| Cooler | Intel boxed cooler | TODO confirm on Intel's page (see part 10) |
+Neither build needs a graphics card — both CPUs have integrated graphics and both boards have video outputs.
 
-### What each build still needs
+---
+## Part 2 — The same facts from the command line
 
-- **Build 1:** a case, a keyboard and monitor, an operating system. No graphics card is needed (the 7600 has integrated graphics; the board has video outputs).
-- **Build 2:** everything above, **plus a power supply**, because the parts list has only one (the RM750e went to Build 1). It also needs a SATA data cable for the 870 EVO and a SATA power connector from the PSU.
-- Both builds have only one 16 GB module, so memory runs in single-channel mode with two empty slots; a second identical module would add a channel.
-<!-- CHECK: whether the MSI box includes a SATA cable and the Wi-Fi antenna: read the "What's in the box" section on msi.com -->
+Raw outputs:
+- [`evidence/macos-specs.txt`](evidence/macos-specs.txt) — **host laptop**, MacBook Air M1, macOS, `system_profiler`
+- [`evidence/linux-specs.txt`](evidence/linux-specs.txt) — **Ubuntu Server 26.04.1 LTS running as a UTM virtual machine** on that Mac
 
-## Part 2 — Same facts, three operating systems
+> The Linux output describes the **virtual machine**, not the Mac. UTM gives it 2 CPU cores, 2048 MiB of RAM and a ~14 GB VirtIO disk, and that is what Linux sees.
+>
+> Windows: nobody in my setup runs Windows natively on this Mac, so the Windows column lists the equivalent PowerShell command for reference only (not run).
 
-Windows is my laptop (the host). Linux is the Ubuntu VM from Lab 1, so it describes the **virtual** machine, not the laptop. No Mac in the pair, so the macOS column shows the commands from the lab guide but they were **not run**.
-
-| Fact | Windows (PowerShell) | Linux (Ubuntu VM) | macOS (not run) |
+| Fact | macOS — host (`system_profiler`) | Linux — Ubuntu VM in UTM | Windows (not run) |
 |---|---|---|---|
-| CPU model | `Get-CimInstance Win32_Processor \| Select Name` | `lscpu` (line "Model name") | `sysctl -n machdep.cpu.brand_string` |
-| Cores / threads | `Get-CimInstance Win32_Processor \| Select NumberOfCores, NumberOfLogicalProcessors` | `lscpu` ("Core(s) per socket", "CPU(s)") | `sysctl hw.physicalcpu hw.logicalcpu` |
-| Total memory | `Get-CimInstance Win32_PhysicalMemory \| Select Capacity` (sum of modules) | `free -h` | `sysctl hw.memsize` |
-| Memory modules and speed | `Get-CimInstance Win32_PhysicalMemory \| Select DeviceLocator, Capacity, Speed, ConfiguredClockSpeed, SMBIOSMemoryType, FormFactor` | `sudo dmidecode -t memory` | `system_profiler SPMemoryDataType` |
-| Disk model and type | `Get-PhysicalDisk \| Select FriendlyName, MediaType, BusType, Size` | `lsblk -d -o NAME,MODEL,ROTA,TRAN,SIZE` | `diskutil info disk0` |
-| Free space | `Get-Volume C` | `df -h /` | `df -h /` |
-| Architecture | `$env:PROCESSOR_ARCHITECTURE` | `uname -m` | `uname -m` |
+| CPU model | `Chip: Apple M1` | not printed by the commands I ran; UTM runs the VM as a *QEMU ARM Virtual Machine* with the host CPU type | `Get-CimInstance Win32_Processor \| Select Name` |
+| Cores | `Total Number of Cores: 8 (4 performance and 4 efficiency)` | 2 (set in UTM) | `NumberOfCores`, `NumberOfLogicalProcessors` |
+| Architecture | Apple M1 = ARM (Apple calls it **arm64**) | `uname -a` → **aarch64** | `$env:PROCESSOR_ARCHITECTURE` |
+| Total memory | `Memory: 8 GB` | 2048 MiB given by UTM; login summary: `Memory usage: 15%` | `Get-CimInstance Win32_PhysicalMemory` |
+| Disk model and type | `Device Name: APPLE SSD AP0256Q`, `Medium Type: SSD`, `Protocol: Apple Fabric` | a VirtIO virtual disk (qcow2 file on the Mac), not the Apple SSD | `Get-PhysicalDisk \| Select FriendlyName, MediaType, BusType, Size` |
+| Disk size / free | `Capacity: 245,11 GB`, `Free: 187,46 GB` | login summary: `Usage of /: 40.5% of 14.14GB` → about 8.4 GB free | `Get-Volume C` |
+| Kernel / OS | macOS (Darwin) | `Linux makromak 7.0.0-38-generic … aarch64`, `Ubuntu 26.04.1 LTS` | `Get-ComputerInfo` |
 
-TODO (2–3 sentences, write after you have the outputs): how the names differ between the systems (compare the exact words each command prints for the same fact, for example how many "cores" and "threads" each one reports and under which names), and what the VM showed differently from the host (compare `lsblk` and `dmidecode` output in the VM with the Windows output on the laptop).
+### What the comparison shows
+
+1. **Same fact, different names.** macOS says `Chip`, Linux's `lscpu` says `Model name`, Windows says `Name`. macOS says `Total Number of Cores`, Linux says `CPU(s)`.
+2. **Same architecture, two names.** Apple calls the M1 architecture **arm64**; Linux on the same chip prints **aarch64**. Both mean 64-bit ARM.
+3. **The locale changes the numbers.** My Mac is set to Russian, so `system_profiler` prints `245,11 GB` with a decimal **comma** and `245 107 195 904 bytes` with spaces. A script that parses this output would break on another Mac with English settings.
+4. **The VM does not see the real machine.** The Mac has 8 cores and 8 GB; the VM sees the 2 cores and 2 GB that UTM gave it. The Mac's disk is an `APPLE SSD` on `Apple Fabric`; the VM sees a VirtIO disk of about 14 GB — which is really a qcow2 file of 7.16 GB on the Mac.
+5. **Back to Part 1.** The M1's memory is part of the chip package (unified memory), so `system_profiler` shows `Memory: 8 GB` with no slots and no module list. Unlike the DIMMs in Part 1, it cannot be upgraded — 8 GB is the limit I had to plan my VMs around.
+
+---
 
 ## What did not work the first time
 
-TODO: one real thing from your own session. What you saw, what it turned out to be, what you did.
+- **The ping in my command line.** I typed `ping -4 c ubuntu.com` instead of `ping -4 -c 4 ubuntu.com`. Ping took `c` as the host name and answered `ping: c: Temporary failure in name resolution` (see `linux-specs.txt`). It was my typo, not a network problem: the same VM had an address (`192.168.64.2`) and reached the internet in Ticket 1.
+- **Text sent into the UTM console turned into `aaaa…`.** Typing a whole command into the VM window from automation gave only the letter `a`: the UTM console works with raw key codes, and those characters arrived without a proper key code. Plain Enter worked. I kept the outputs that were typed by hand on the keyboard.
+- **The Crucial page.** The product page opens, but its specification block returns a *404*. I used the Wayback Machine copy of the same Crucial URL for the screenshot.
+- **Samsung pages by region.** The 990 PRO page is missing on the Kazakhstan site (404) and the 870 EVO page is missing on the UK site, so the two Samsung screenshots come from different regional Samsung sites.
 
 ## Evidence
 
-- [evidence/windows-specs.txt](evidence/windows-specs.txt) — each Windows command with its raw output
-- [evidence/linux-specs.txt](evidence/linux-specs.txt) — each Linux command with its raw output, from the VM
-- [evidence/photos/](evidence/photos/) — screenshots of the ten maker pages
+- [evidence/photos/](evidence/photos/) — screenshots of the ten makers' product pages (taken 9 Nov 2026)
+- [evidence/macos-specs.txt](evidence/macos-specs.txt) — `system_profiler` output from the Mac (identifiers removed)
+- [evidence/linux-specs.txt](evidence/linux-specs.txt) — commands and output from the Ubuntu VM in UTM
+
+*Use of AI: Claude (Anthropic) was used to read the makers' pages, take and crop the screenshots, check the specifications and draft this README. The command output is from my own Mac and VM.*
