@@ -1,0 +1,31 @@
+# linux-specs.txt — Lab 3 evidence
+# Ubuntu Server 26.04.1 LTS (ARM64) running as a virtual machine in UTM (QEMU backend) on my MacBook Air M1.
+# UTM settings of this VM: 2 CPU cores, 2048 MiB RAM, VirtIO qcow2 disk
+# (screenshots: tickets/ticket1-vm-build-doc/evidence/01-new-vm-wizard.png and 02-disk-settings.png).
+# This output describes the VIRTUAL machine, not the Mac.
+# Transcribed from the UTM console on 8 Nov 2026 (the Ubuntu Server console has no clipboard).
+
+## Login summary that Ubuntu prints at login (landscape-sysinfo)
+
+ System information as of Sun Nov  8 12:17:27 PM UTC 2026
+
+  System load:             1.05
+  Usage of /:              40.5% of 14.14GB
+  Memory usage:            15%
+  Swap usage:              0%
+  Processes:               115
+  Users logged in:         0
+  IPv4 address for enp0s1: 192.168.64.2
+
+## Commands
+
+makro@makromak:~$ uname -a; lsb_release -a;ip -br a;ping -4 c ubuntu.com
+Linux makromak 7.0.0-38-generic #38-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep  4 09:28:02 UTC 2026 aarch64 GNU/Linux
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 26.04.1 LTS
+Release:        26.04
+Codename:       resolute
+lo               UNKNOWN        127.0.0.1/8 ::1/128
+enp0s1           UP             192.168.64.2/24 metric 100 fd89:c7ac:d898:bd8:7ccb:63ff:fea4:ab8d/64 fe80::7ccb:63ff:fea4:ab8d/64
+ping: c: Temporary failure in name resolution
