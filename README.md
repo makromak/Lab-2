@@ -43,6 +43,7 @@ Week __ — `____` : [tools/____.md](tools/)
 | Assignment | Tool | What for |
 |------------|------|----------|
 | Ticket 1 | Claude (Anthropic) | Drafting the structure of README.md and BUILD.md from my Lab 1/Lab 2 notes |
+| Lab 3 | Claude (Anthropic) | Reading the makers' pages, taking the screenshots, checking specs and drafting the README; command output is from my own Mac and VM |
 
 > Declaring this costs nothing. Not declaring it, when it comes up at the
 > defence, costs the assignment.
