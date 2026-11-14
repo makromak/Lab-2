@@ -14,7 +14,7 @@
 | 1 | Your first virtual machine | [labs/lab01-first-vm](labs/lab01-first-vm) | |
 | 2 | A Windows guest, and a network | [labs/lab02-windows-vm](labs/lab02-windows-vm) | Done (pair with Kazhymurat) |
 | 3 | Teardown | [labs/lab03-teardown](labs/lab03-teardown) | |
-| 4 | Partition, mirror, fail, recover | [labs/lab04-storage](labs/lab04-storage) | |
+| 4 | Partition, mirror, fail, recover | [labs/lab04-storage](labs/lab04-storage) | Linux part done (UTM on my Mac); Windows part not done yet |
 | 5 | Encoding forensics | [labs/lab05-encoding](labs/lab05-encoding) | |
 | 6 | Live processes and memory pressure | [labs/lab06-processes](labs/lab06-processes) | |
 | 7 | CLI dojo | [labs/lab07-cli-dojo](labs/lab07-cli-dojo) | |
@@ -44,6 +44,7 @@ Week __ — `____` : [tools/____.md](tools/)
 |------------|------|----------|
 | Ticket 1 | Claude (Anthropic) | Drafting the structure of README.md and BUILD.md from my Lab 1/Lab 2 notes |
 | Lab 3 | Claude (Anthropic) | Reading the makers' pages, taking the screenshots, checking specs and drafting the README; command output is from my own Mac and VM |
+| Lab 4 | Claude (Anthropic) | Explaining each command step by step, drafting the README and uploading the files; I ran every command myself on my own Ubuntu VM and the evidence files are the unedited output |
 
 > Declaring this costs nothing. Not declaring it, when it comes up at the
 > defence, costs the assignment.
