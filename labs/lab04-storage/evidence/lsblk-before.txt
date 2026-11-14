@@ -1,0 +1,11 @@
+$ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS
+NAME                       SIZE TYPE FSTYPE      MOUNTPOINTS
+sr0                       1024M rom              
+vda                         32G disk             
+├─vda1                       1G part vfat        /boot/efi
+├─vda2                       2G part ext4        /boot
+└─vda3                    28.9G part LVM2_member 
+  └─ubuntu--vg-ubuntu--lv 14.5G lvm  ext4        /
+vdb                          1G disk             
+vdc                          1G disk             
+vdd                          1G disk             
