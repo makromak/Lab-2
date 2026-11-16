@@ -1,0 +1,619 @@
+Nov 14 11:42:18 makromak kernel: audit: type=1400 audit(1794656538.595:233): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=34598 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+Nov 14 11:42:18 makromak kernel: audit: type=1400 audit(1794656538.597:234): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=34598 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+Nov 14 11:42:18 makromak kernel: audit: type=1400 audit(1794656538.597:235): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=34598 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+Nov 14 12:00:28 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:28 makromak kernel: CPU: 0 UID: 1000 PID: 44221 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:28 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:28 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:28 makromak kernel: Call trace:
+Nov 14 12:00:28 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:28 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:28 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:28 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:28 makromak kernel: [  44221]  1000 44221   662334   112142   111997      145         0  3108864   264043          1000 stress-ng-vm
+Nov 14 12:00:28 makromak kernel: [  44222]  1000 44222   662334   219886   219741      145         0  3887104   253579          1000 stress-ng-vm
+Nov 14 12:00:28 makromak kernel: [  44225]  1000 44225     4311      639      152      487         0    73728      143             0 sleep
+Nov 14 12:00:28 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44222,uid=1000
+Nov 14 12:00:28 makromak kernel: Out of memory: Killed process 44222 (stress-ng-vm) total-vm:2649336kB, anon-rss:878964kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:3796kB oom_score_adj:1000
+Nov 14 12:00:30 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:30 makromak kernel: CPU: 0 UID: 1000 PID: 44221 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:30 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:30 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:30 makromak kernel: Call trace:
+Nov 14 12:00:30 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:30 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:30 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:30 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:30 makromak kernel: [  44221]  1000 44221   662334    81904    81759      145         0  4820992   508267          1000 stress-ng-vm
+Nov 14 12:00:30 makromak kernel: [  44226]  1000 44226   662334   258701   258554      145         2  2236416     8488          1000 stress-ng-vm
+Nov 14 12:00:30 makromak kernel: [  44229]  1000 44229     2087      414       44      370         0    53248        0             0 free
+Nov 14 12:00:30 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44221,uid=1000
+Nov 14 12:00:30 makromak kernel: Out of memory: Killed process 44221 (stress-ng-vm) total-vm:2649336kB, anon-rss:327036kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4708kB oom_score_adj:1000
+Nov 14 12:00:33 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:33 makromak kernel: CPU: 0 UID: 1000 PID: 44226 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:33 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:33 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:33 makromak kernel: Call trace:
+Nov 14 12:00:33 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:33 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:33 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:33 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:33 makromak kernel: [  44226]  1000 44226   662334   257691   257546      145         0  4952064   348698          1000 stress-ng-vm
+Nov 14 12:00:33 makromak kernel: [  44230]  1000 44230     4046      487        0      487         0    69632      295             0 sleep
+Nov 14 12:00:33 makromak kernel: [  44231]  1000 44231   662334    84979    84818      161         0  2109440   166723          1000 stress-ng-vm
+Nov 14 12:00:33 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44226,uid=1000
+Nov 14 12:00:33 makromak kernel: Out of memory: Killed process 44226 (stress-ng-vm) total-vm:2649336kB, anon-rss:1030184kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4836kB oom_score_adj:1000
+Nov 14 12:00:36 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:36 makromak kernel: CPU: 1 UID: 1000 PID: 44232 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:36 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:36 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:36 makromak kernel: Call trace:
+Nov 14 12:00:36 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:36 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:36 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:36 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:36 makromak kernel: [  44231]  1000 44231   662334    48784    48639      145         0  4050944   445158          1000 stress-ng-vm
+Nov 14 12:00:36 makromak kernel: [  44232]  1000 44232   662334   295620   295475      145         0  3026944    70185          1000 stress-ng-vm
+Nov 14 12:00:36 makromak kernel: [  44235]  1000 44235     4305      643      156      487         0    73728      139             0 sleep
+Nov 14 12:00:36 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44231,uid=1000
+Nov 14 12:00:36 makromak kernel: Out of memory: Killed process 44231 (stress-ng-vm) total-vm:2649336kB, anon-rss:194556kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:3956kB oom_score_adj:1000
+Nov 14 12:00:38 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:38 makromak kernel: CPU: 1 UID: 1000 PID: 44236 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:38 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:38 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:38 makromak kernel: Call trace:
+Nov 14 12:00:38 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:38 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:38 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:38 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:38 makromak kernel: [  44232]  1000 44232   662334   247601   247438      161         2  5345280   408154          1000 stress-ng-vm
+Nov 14 12:00:38 makromak kernel: [  44235]  1000 44235     4305      497        7      490         0    73728      288             0 sleep
+Nov 14 12:00:38 makromak kernel: [  44236]  1000 44236   662334    98927    98766      161         0  1732608   105734          1000 stress-ng-vm
+Nov 14 12:00:38 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44232,uid=1000
+Nov 14 12:00:38 makromak kernel: Out of memory: Killed process 44232 (stress-ng-vm) total-vm:2649336kB, anon-rss:989752kB, file-rss:644kB, shmem-rss:8kB, UID:1000 pgtables:5220kB oom_score_adj:1000
+Nov 14 12:00:42 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:42 makromak kernel: CPU: 0 UID: 1000 PID: 44236 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:42 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:42 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:42 makromak kernel: Call trace:
+Nov 14 12:00:42 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:42 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:42 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:42 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:42 makromak kernel: [  44236]  1000 44236   662334    55096    54951      145         0  4296704   469222          1000 stress-ng-vm
+Nov 14 12:00:42 makromak kernel: [  44238]  1000 44238   662334   289549   289404      145         0  2772992    44403          1000 stress-ng-vm
+Nov 14 12:00:42 makromak kernel: [  44242]  1000 44242     3932      317       38      279         0    49152        0             0 date
+Nov 14 12:00:42 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44236,uid=1000
+Nov 14 12:00:42 makromak kernel: Out of memory: Killed process 44236 (stress-ng-vm) total-vm:2649336kB, anon-rss:219804kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4196kB oom_score_adj:1000
+Nov 14 12:00:44 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:44 makromak kernel: CPU: 0 UID: 1000 PID: 44244 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:44 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:44 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:44 makromak kernel: Call trace:
+Nov 14 12:00:44 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:44 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:44 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:44 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:44 makromak kernel: [  44238]  1000 44238   662334   252701   252556      145         0  5263360   392326          1000 stress-ng-vm
+Nov 14 12:00:44 makromak kernel: [  44244]  1000 44244   662334    95722    95577      145         0  1826816   120550          1000 stress-ng-vm
+Nov 14 12:00:44 makromak kernel: [  44246]  1000 44246     4097      488        1      487         0    73728      294             0 sleep
+Nov 14 12:00:44 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44238,uid=1000
+Nov 14 12:00:44 makromak kernel: Out of memory: Killed process 44238 (stress-ng-vm) total-vm:2649336kB, anon-rss:1010224kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:5140kB oom_score_adj:1000
+Nov 14 12:00:48 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:48 makromak kernel: CPU: 1 UID: 1000 PID: 44247 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:48 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:48 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:48 makromak kernel: Call trace:
+Nov 14 12:00:48 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:48 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:48 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:48 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:48 makromak kernel: [  44244]  1000 44244   662334    61807    61662      145         0  3993600   424970          1000 stress-ng-vm
+Nov 14 12:00:48 makromak kernel: [  44247]  1000 44247   662334   261893   261748      145         0  2899968    88180          1000 stress-ng-vm
+Nov 14 12:00:48 makromak kernel: [  44250]  1000 44250     4475      782      295      487         0    77824        0             0 sleep
+Nov 14 12:00:48 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44244,uid=1000
+Nov 14 12:00:48 makromak kernel: Out of memory: Killed process 44244 (stress-ng-vm) total-vm:2649336kB, anon-rss:246648kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:3900kB oom_score_adj:1000
+Nov 14 12:00:49 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:50 makromak kernel: CPU: 0 UID: 1000 PID: 44247 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:50 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:50 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:50 makromak kernel: Call trace:
+Nov 14 12:00:50 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:50 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:50 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:50 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:50 makromak kernel: [  44247]  1000 44247   662334   248976   248829      145         2  5345280   406763          1000 stress-ng-vm
+Nov 14 12:00:50 makromak kernel: [  44250]  1000 44250     4475      487        0      487         0    77824      295             0 sleep
+Nov 14 12:00:50 makromak kernel: [  44251]  1000 44251   662334   100332   100187      145         0  1744896   105616          1000 stress-ng-vm
+Nov 14 12:00:50 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44247,uid=1000
+Nov 14 12:00:50 makromak kernel: Out of memory: Killed process 44247 (stress-ng-vm) total-vm:2649336kB, anon-rss:995316kB, file-rss:580kB, shmem-rss:8kB, UID:1000 pgtables:5220kB oom_score_adj:1000
+Nov 14 12:00:53 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:53 makromak kernel: CPU: 1 UID: 1000 PID: 44251 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:53 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:53 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:53 makromak kernel: Call trace:
+Nov 14 12:00:53 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:53 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:53 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:53 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:53 makromak kernel: [  44251]  1000 44251   662334    89776    89631      145         0  4165632   418022          1000 stress-ng-vm
+Nov 14 12:00:53 makromak kernel: [  44252]  1000 44252   662334   261424   261279      145         0  2945024    93994          1000 stress-ng-vm
+Nov 14 12:00:53 makromak kernel: [  44255]  1000 44255     4158      678      191      487         0    77824      104             0 sleep
+Nov 14 12:00:53 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44251,uid=1000
+Nov 14 12:00:53 makromak kernel: Out of memory: Killed process 44251 (stress-ng-vm) total-vm:2649336kB, anon-rss:358524kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4068kB oom_score_adj:1000
+Nov 14 12:00:54 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:54 makromak kernel: CPU: 1 UID: 1000 PID: 44252 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:54 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:54 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:54 makromak kernel: Call trace:
+Nov 14 12:00:54 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:54 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:54 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:54 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:54 makromak kernel: [  44252]  1000 44252   662334   219297   219152      145         0  5226496   421592          1000 stress-ng-vm
+Nov 14 12:00:54 makromak kernel: [  44255]  1000 44255     4158      487        0      487         0    77824      295             0 sleep
+Nov 14 12:00:54 makromak kernel: [  44256]  1000 44256   662334   117568   117423      145         0  1748992    89145          1000 stress-ng-vm
+Nov 14 12:00:54 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44252,uid=1000
+Nov 14 12:00:54 makromak kernel: Out of memory: Killed process 44252 (stress-ng-vm) total-vm:2649336kB, anon-rss:876608kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:5104kB oom_score_adj:1000
+Nov 14 12:00:58 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:00:58 makromak kernel: CPU: 1 UID: 1000 PID: 44258 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:00:58 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:00:58 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:00:58 makromak kernel: Call trace:
+Nov 14 12:00:58 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:00:58 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:00:58 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:00:58 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:00:58 makromak kernel: [  44256]  1000 44256   662334    78660    78515      145         0  4354048   452838          1000 stress-ng-vm
+Nov 14 12:00:58 makromak kernel: [  44258]  1000 44258   662334   278282   278137      145         0  2793472    58012          1000 stress-ng-vm
+Nov 14 12:00:58 makromak kernel: [  44260]  1000 44260     4127      619      132      487         0    73728      163             0 sleep
+Nov 14 12:00:58 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44256,uid=1000
+Nov 14 12:00:58 makromak kernel: Out of memory: Killed process 44256 (stress-ng-vm) total-vm:2649336kB, anon-rss:314060kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4252kB oom_score_adj:1000
+Nov 14 12:01:00 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:00 makromak kernel: CPU: 1 UID: 1000 PID: 44261 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:00 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:00 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:00 makromak kernel: Call trace:
+Nov 14 12:01:00 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:00 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:00 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:00 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:00 makromak kernel: [  44258]  1000 44258   662334   244700   244555      145         0  5283840   402945          1000 stress-ng-vm
+Nov 14 12:01:00 makromak kernel: [  44261]  1000 44261   662334   108381   108236      145         0  1818624   106717          1000 stress-ng-vm
+Nov 14 12:01:00 makromak kernel: [  44264]  1000 44264     4022      782      295      487         0    77824        0             0 sleep
+Nov 14 12:01:00 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44258,uid=1000
+Nov 14 12:01:00 makromak kernel: Out of memory: Killed process 44258 (stress-ng-vm) total-vm:2649336kB, anon-rss:978220kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:5160kB oom_score_adj:1000
+Nov 14 12:01:04 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:04 makromak kernel: CPU: 0 UID: 1000 PID: 44261 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:04 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:04 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:04 makromak kernel: Call trace:
+Nov 14 12:01:04 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:04 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:04 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:04 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:04 makromak kernel: [  44261]  1000 44261   662334    64112    63967      145         0  4079616   432918          1000 stress-ng-vm
+Nov 14 12:01:04 makromak kernel: [  44265]  1000 44265   662334   288310   288165      145         0  3018752    76544          1000 stress-ng-vm
+Nov 14 12:01:04 makromak kernel: [  44268]  1000 44268     4182      779      294      485         0    77824        0             0 sleep
+Nov 14 12:01:04 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44261,uid=1000
+Nov 14 12:01:04 makromak kernel: Out of memory: Killed process 44261 (stress-ng-vm) total-vm:2649336kB, anon-rss:255868kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:3984kB oom_score_adj:1000
+Nov 14 12:01:06 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140cca(GFP_HIGHUSER_MOVABLE|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:06 makromak kernel: CPU: 1 UID: 1000 PID: 44269 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:06 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:06 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:06 makromak kernel: Call trace:
+Nov 14 12:01:06 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:06 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:06 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:06 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:06 makromak kernel: [  44265]  1000 44265   662334   270331   270184      145         2  5345280   385408          1000 stress-ng-vm
+Nov 14 12:01:06 makromak kernel: [  44268]  1000 44268     4182      486        1      485         0    77824      293             0 sleep
+Nov 14 12:01:06 makromak kernel: [  44269]  1000 44269   662334    85997    85852      145         0  1773568   123559          1000 stress-ng-vm
+Nov 14 12:01:06 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44265,uid=1000
+Nov 14 12:01:06 makromak kernel: Out of memory: Killed process 44265 (stress-ng-vm) total-vm:2649336kB, anon-rss:1080736kB, file-rss:580kB, shmem-rss:8kB, UID:1000 pgtables:5220kB oom_score_adj:1000
+Nov 14 12:01:09 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:09 makromak kernel: CPU: 1 UID: 1000 PID: 44270 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:09 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:09 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:09 makromak kernel: Call trace:
+Nov 14 12:01:09 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:09 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:09 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:09 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:09 makromak kernel: [  44269]  1000 44269   662334    81555    81410      145         0  4288512   442086          1000 stress-ng-vm
+Nov 14 12:01:09 makromak kernel: [  44270]  1000 44270   662334   256533   256388      145         0  2686976    66916          1000 stress-ng-vm
+Nov 14 12:01:09 makromak kernel: [  44273]  1000 44273     4399      672      185      487         0    69632      110             0 sleep
+Nov 14 12:01:09 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44269,uid=1000
+Nov 14 12:01:09 makromak kernel: Out of memory: Killed process 44269 (stress-ng-vm) total-vm:2649336kB, anon-rss:325640kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4188kB oom_score_adj:1000
+Nov 14 12:01:11 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:11 makromak kernel: CPU: 1 UID: 1000 PID: 44274 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:11 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:11 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:11 makromak kernel: Call trace:
+Nov 14 12:01:11 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:11 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:11 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:11 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:11 makromak kernel: [  44270]  1000 44270   662334   240038   239893      145         0  5292032   408917          1000 stress-ng-vm
+Nov 14 12:01:11 makromak kernel: [  44274]  1000 44274   662334   121680   121535      145         0  1863680    99213          1000 stress-ng-vm
+Nov 14 12:01:11 makromak kernel: [  44277]  1000 44277     4185      782      295      487         0    73728        0             0 sleep
+Nov 14 12:01:11 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44270,uid=1000
+Nov 14 12:01:11 makromak kernel: Out of memory: Killed process 44270 (stress-ng-vm) total-vm:2649336kB, anon-rss:959572kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:5168kB oom_score_adj:1000
+Nov 14 12:01:15 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:15 makromak kernel: CPU: 1 UID: 1000 PID: 44278 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:15 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:15 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:15 makromak kernel: Call trace:
+Nov 14 12:01:15 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:15 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:15 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:15 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:15 makromak kernel: [  44274]  1000 44274   662334    59027    58882      145         0  4325376   469222          1000 stress-ng-vm
+Nov 14 12:01:15 makromak kernel: [  44278]  1000 44278   662334   270210   270065      145         0  2572288    38903          1000 stress-ng-vm
+Nov 14 12:01:15 makromak kernel: [  44280]  1000 44280     2685      191      111       80         0    49152      302             0 bash
+Nov 14 12:01:15 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44274,uid=1000
+Nov 14 12:01:15 makromak kernel: Out of memory: Killed process 44274 (stress-ng-vm) total-vm:2649336kB, anon-rss:235528kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4224kB oom_score_adj:1000
+Nov 14 12:01:17 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:17 makromak kernel: CPU: 0 UID: 1000 PID: 44281 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:17 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:17 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:17 makromak kernel: Call trace:
+Nov 14 12:01:17 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:17 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:17 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:17 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:17 makromak kernel: [  44278]  1000 44278   662334   226944   226799      145         0  4849664   366841          1000 stress-ng-vm
+Nov 14 12:01:17 makromak kernel: [  44281]  1000 44281   662334   113973   113828      145         0  2134016   140868          1000 stress-ng-vm
+Nov 14 12:01:17 makromak kernel: [  44282]  1000 44282     4215      487        0      487         0    73728      295             0 sleep
+Nov 14 12:01:17 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44278,uid=1000
+Nov 14 12:01:17 makromak kernel: Out of memory: Killed process 44278 (stress-ng-vm) total-vm:2649336kB, anon-rss:907196kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4736kB oom_score_adj:1000
+Nov 14 12:01:21 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:21 makromak kernel: CPU: 1 UID: 1000 PID: 44283 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:22 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:22 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:22 makromak kernel: Call trace:
+Nov 14 12:01:22 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:22 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:22 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:22 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:22 makromak kernel: [  44281]  1000 44281   662334   114535   114390      145         0  4501504   435730          1000 stress-ng-vm
+Nov 14 12:01:22 makromak kernel: [  44283]  1000 44283   662334   218845   218699      145         1  2428928    72349          1000 stress-ng-vm
+Nov 14 12:01:22 makromak kernel: [  44286]  1000 44286     4334      781      294      487         0    77824        0             0 sleep
+Nov 14 12:01:22 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44281,uid=1000
+Nov 14 12:01:22 makromak kernel: Out of memory: Killed process 44281 (stress-ng-vm) total-vm:2649336kB, anon-rss:457560kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4396kB oom_score_adj:1000
+Nov 14 12:01:24 makromak systemd-journald[514]: Under memory pressure, flushing caches.
+Nov 14 12:01:24 makromak kernel: bash invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=0
+Nov 14 12:01:24 makromak kernel: CPU: 1 UID: 1000 PID: 43485 Comm: bash Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:24 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:24 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:24 makromak kernel: Call trace:
+Nov 14 12:01:24 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:24 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:24 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:24 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:24 makromak kernel: [  44220]  1000 44220     6974      311        0      311         0    90112      232             0 stress-ng-vm
+Nov 14 12:01:24 makromak kernel: [  44283]  1000 44283   662334   285971   285809      161         1  5345280   369783          1000 stress-ng-vm
+Nov 14 12:01:24 makromak kernel: [  44287]  1000 44287   662334    49481    49336      145         0  1597440   138288          1000 stress-ng-vm
+Nov 14 12:01:24 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44283,uid=1000
+Nov 14 12:01:24 makromak kernel: Out of memory: Killed process 44283 (stress-ng-vm) total-vm:2649336kB, anon-rss:1143236kB, file-rss:644kB, shmem-rss:4kB, UID:1000 pgtables:5220kB oom_score_adj:1000
+Nov 14 12:01:27 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:27 makromak kernel: CPU: 0 UID: 1000 PID: 44291 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:27 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:27 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:27 makromak kernel: Call trace:
+Nov 14 12:01:27 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:27 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:27 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:27 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:27 makromak kernel: [  44287]  1000 44287   662334    85240    85095      145         0  4493312   463590          1000 stress-ng-vm
+Nov 14 12:01:27 makromak kernel: [  44291]  1000 44291   662334   276829   276684      145         0  2670592    44508          1000 stress-ng-vm
+Nov 14 12:01:27 makromak kernel: [  44292]  1000 44292     2685      339      147      192         0    49152      266             0 bash
+Nov 14 12:01:27 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44287,uid=1000
+Nov 14 12:01:27 makromak kernel: Out of memory: Killed process 44287 (stress-ng-vm) total-vm:2649336kB, anon-rss:340380kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4388kB oom_score_adj:1000
+Nov 14 12:01:30 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:30 makromak kernel: CPU: 1 UID: 1000 PID: 44291 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:30 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:30 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:30 makromak kernel: Call trace:
+Nov 14 12:01:30 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:30 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:30 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:30 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:30 makromak kernel: [  44291]  1000 44291   662334   248132   247987      145         0  5066752   372789          1000 stress-ng-vm
+Nov 14 12:01:30 makromak kernel: [  44293]  1000 44293   662334    81514    81369      145         0  1826816   134927          1000 stress-ng-vm
+Nov 14 12:01:30 makromak kernel: [  44295]  1000 44295     4031      488        1      487         0    69632      294             0 sleep
+Nov 14 12:01:30 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44291,uid=1000
+Nov 14 12:01:30 makromak kernel: Out of memory: Killed process 44291 (stress-ng-vm) total-vm:2649336kB, anon-rss:991948kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4948kB oom_score_adj:1000
+Nov 14 12:01:34 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:34 makromak kernel: CPU: 0 UID: 1000 PID: 44293 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:34 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:34 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:34 makromak kernel: Call trace:
+Nov 14 12:01:34 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:34 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:34 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:34 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:34 makromak kernel: [  44293]  1000 44293   662334    67188    67043      145         0  4321280   460549          1000 stress-ng-vm
+Nov 14 12:01:34 makromak kernel: [  44296]  1000 44296   662334   261593   261448      145         0  2572288    47520          1000 stress-ng-vm
+Nov 14 12:01:34 makromak kernel: [  44299]  1000 44299     4143      782      295      487         0    73728        0             0 sleep
+Nov 14 12:01:34 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44293,uid=1000
+Nov 14 12:01:34 makromak kernel: Out of memory: Killed process 44293 (stress-ng-vm) total-vm:2649336kB, anon-rss:268172kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4220kB oom_score_adj:1000
+Nov 14 12:01:36 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:36 makromak kernel: CPU: 0 UID: 1000 PID: 44300 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:36 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:36 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:36 makromak kernel: Call trace:
+Nov 14 12:01:36 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:36 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:36 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:36 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:36 makromak kernel: [  44296]  1000 44296   662334   235395   235250      145         0  4984832   375286          1000 stress-ng-vm
+Nov 14 12:01:36 makromak kernel: [  44300]  1000 44300   662334    95379    95234      145         0  1921024   132838          1000 stress-ng-vm
+Nov 14 12:01:36 makromak kernel: [  44301]  1000 44301     2689       53        9       44         0    40960        0             0 date
+Nov 14 12:01:36 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44296,uid=1000
+Nov 14 12:01:36 makromak kernel: Out of memory: Killed process 44296 (stress-ng-vm) total-vm:2649336kB, anon-rss:941000kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4868kB oom_score_adj:1000
+Nov 14 12:01:40 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:40 makromak kernel: CPU: 0 UID: 1000 PID: 44304 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:40 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:40 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:40 makromak kernel: Call trace:
+Nov 14 12:01:40 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:40 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:40 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:40 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:40 makromak kernel: [  44300]  1000 44300   662334    65032    64887      145         0  4136960   439231          1000 stress-ng-vm
+Nov 14 12:01:40 makromak kernel: [  44304]  1000 44304   662334   295783   295638      145         0  3018752    68819          1000 stress-ng-vm
+Nov 14 12:01:40 makromak kernel: [  44305]  1000 44305     2685      268      108      160         0    49152      305             0 bash
+Nov 14 12:01:40 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44300,uid=1000
+Nov 14 12:01:40 makromak kernel: Out of memory: Killed process 44300 (stress-ng-vm) total-vm:2649336kB, anon-rss:259548kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4040kB oom_score_adj:1000
+Nov 14 12:01:42 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:42 makromak kernel: CPU: 1 UID: 1000 PID: 44306 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:42 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:42 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:42 makromak kernel: Call trace:
+Nov 14 12:01:42 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:42 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:42 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:42 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:42 makromak kernel: [  44304]  1000 44304   662334   225430   225285      145         0  5193728   411363          1000 stress-ng-vm
+Nov 14 12:01:42 makromak kernel: [  44306]  1000 44306   662334   108691   108546      145         0  1736704    96486          1000 stress-ng-vm
+Nov 14 12:01:42 makromak kernel: [  44308]  1000 44308     4336      616      129      487         0    77824      166             0 sleep
+Nov 14 12:01:42 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44304,uid=1000
+Nov 14 12:01:42 makromak kernel: Out of memory: Killed process 44304 (stress-ng-vm) total-vm:2649336kB, anon-rss:901140kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:5072kB oom_score_adj:1000
+Nov 14 12:01:45 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:45 makromak kernel: CPU: 0 UID: 1000 PID: 44306 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:45 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:45 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:45 makromak kernel: Call trace:
+Nov 14 12:01:45 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:45 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:45 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:45 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:45 makromak kernel: [  44306]  1000 44306   662334    78861    78716      145         0  4329472   449388          1000 stress-ng-vm
+Nov 14 12:01:45 makromak kernel: [  44309]  1000 44309   662334   279968   279823      145         0  2809856    58618          1000 stress-ng-vm
+Nov 14 12:01:45 makromak kernel: [  44312]  1000 44312     4314      781      294      487         0    69632        0             0 sleep
+Nov 14 12:01:45 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44306,uid=1000
+Nov 14 12:01:45 makromak kernel: Out of memory: Killed process 44306 (stress-ng-vm) total-vm:2649336kB, anon-rss:314864kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4228kB oom_score_adj:1000
+Nov 14 12:01:47 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:48 makromak kernel: CPU: 1 UID: 1000 PID: 44313 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:48 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:48 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:48 makromak kernel: Call trace:
+Nov 14 12:01:48 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:48 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:48 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:48 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:48 makromak kernel: [  44309]  1000 44309   662334   226566   226421      145         0  4763648   356467          1000 stress-ng-vm
+Nov 14 12:01:48 makromak kernel: [  44313]  1000 44313   662334   114686   114541      145         0  2224128   151419          1000 stress-ng-vm
+Nov 14 12:01:48 makromak kernel: [  44314]  1000 44314     2685      268      108      160         0    49152      305             0 bash
+Nov 14 12:01:48 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44309,uid=1000
+Nov 14 12:01:48 makromak kernel: Out of memory: Killed process 44309 (stress-ng-vm) total-vm:2649336kB, anon-rss:905684kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4652kB oom_score_adj:1000
+Nov 14 12:01:50 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:50 makromak kernel: CPU: 0 UID: 1000 PID: 44315 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:50 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:50 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:50 makromak kernel: Call trace:
+Nov 14 12:01:50 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:50 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:50 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:50 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:50 makromak kernel: [  44317]  1000 44317     4227      483        1      482         0    69632      293             0 sleep
+Nov 14 12:01:50 makromak kernel: [  44318]   985 44318    84610     1071      518      553         0   176128        0             0 fwupdmgr
+Nov 14 12:01:50 makromak kernel: [  44326]     0 44326     5248      205       63      142         0    77824        0             0 fwupd
+Nov 14 12:01:50 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44313,uid=1000
+Nov 14 12:01:50 makromak kernel: Out of memory: Killed process 44313 (stress-ng-vm) total-vm:2649336kB, anon-rss:441384kB, file-rss:644kB, shmem-rss:0kB, UID:1000 pgtables:3804kB oom_score_adj:1000
+Nov 14 12:01:54 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:54 makromak kernel: CPU: 1 UID: 1000 PID: 44330 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:54 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:54 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:54 makromak kernel: Call trace:
+Nov 14 12:01:54 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:54 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:54 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:54 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:54 makromak kernel: [  44326]     0 44326    92541     1638      803      835         0   229376      724             0 fwupd
+Nov 14 12:01:54 makromak kernel: [  44330]  1000 44330   662334   114073   113912      161         0  1744896    92144          1000 stress-ng-vm
+Nov 14 12:01:54 makromak kernel: [  44337]  1000 44337     4338      483        1      482         0    77824      293             0 sleep
+Nov 14 12:01:54 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44315,uid=1000
+Nov 14 12:01:54 makromak kernel: Out of memory: Killed process 44315 (stress-ng-vm) total-vm:2649336kB, anon-rss:959480kB, file-rss:644kB, shmem-rss:4kB, UID:1000 pgtables:5220kB oom_score_adj:1000
+Nov 14 12:01:57 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:01:57 makromak kernel: CPU: 1 UID: 1000 PID: 44340 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:01:57 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:01:57 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:01:57 makromak kernel: Call trace:
+Nov 14 12:01:57 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:01:57 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:01:57 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:01:57 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:01:57 makromak kernel: [  44330]  1000 44330   662334    93104    92959      145         0  4128768   410295          1000 stress-ng-vm
+Nov 14 12:01:57 makromak kernel: [  44340]  1000 44340   662334   268149   268004      145         0  3031040    97809          1000 stress-ng-vm
+Nov 14 12:01:57 makromak kernel: [  44343]  1000 44343     4217      778      294      484         0    73728        0             0 sleep
+Nov 14 12:01:57 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44330,uid=1000
+Nov 14 12:01:57 makromak kernel: Out of memory: Killed process 44330 (stress-ng-vm) total-vm:2649336kB, anon-rss:371836kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4032kB oom_score_adj:1000
+Nov 14 12:02:00 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:00 makromak kernel: CPU: 1 UID: 1000 PID: 44344 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:00 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:00 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:00 makromak kernel: Call trace:
+Nov 14 12:02:00 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:00 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:00 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:00 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:00 makromak kernel: [  44340]  1000 44340   662334   297546   297399      145         2  5345280   358193          1000 stress-ng-vm
+Nov 14 12:02:00 makromak kernel: [  44344]  1000 44344   662334    29954    29809      145         0  1531904   149623          1000 stress-ng-vm
+Nov 14 12:02:00 makromak kernel: [  44345]  1000 44345     3750      229       21      208         0    49152        0             0 date
+Nov 14 12:02:00 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44340,uid=1000
+Nov 14 12:02:00 makromak kernel: Out of memory: Killed process 44340 (stress-ng-vm) total-vm:2649336kB, anon-rss:1189596kB, file-rss:580kB, shmem-rss:8kB, UID:1000 pgtables:5220kB oom_score_adj:1000
+Nov 14 12:02:02 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x140dca(GFP_HIGHUSER_MOVABLE|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:03 makromak kernel: CPU: 1 UID: 1000 PID: 44348 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:03 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:03 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:03 makromak kernel: Call trace:
+Nov 14 12:02:03 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:03 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:03 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:03 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:03 makromak kernel: [  44344]  1000 44344   662334    67776    67615      161         0  4157440   439014          1000 stress-ng-vm
+Nov 14 12:02:03 makromak kernel: [  44347]  1000 44347     4156      487        0      487         0    69632      295             0 sleep
+Nov 14 12:02:03 makromak kernel: [  44348]  1000 44348   662334   289771   289626      145         0  2961408    67602          1000 stress-ng-vm
+Nov 14 12:02:03 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44344,uid=1000
+Nov 14 12:02:03 makromak kernel: Out of memory: Killed process 44344 (stress-ng-vm) total-vm:2649336kB, anon-rss:270460kB, file-rss:644kB, shmem-rss:0kB, UID:1000 pgtables:4060kB oom_score_adj:1000
+Nov 14 12:02:04 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:04 makromak kernel: CPU: 1 UID: 1000 PID: 44349 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:04 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:04 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:04 makromak kernel: Call trace:
+Nov 14 12:02:04 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:04 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:04 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:04 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:04 makromak kernel: [  44348]  1000 44348   662334   240422   240277      145         0  5206016   397907          1000 stress-ng-vm
+Nov 14 12:02:04 makromak kernel: [  44349]  1000 44349   662334    91148    91003      145         0  1695744   108909          1000 stress-ng-vm
+Nov 14 12:02:04 makromak kernel: [  44352]  1000 44352     4177      657      171      486         0    73728      123             0 sleep
+Nov 14 12:02:04 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44348,uid=1000
+Nov 14 12:02:04 makromak kernel: Out of memory: Killed process 44348 (stress-ng-vm) total-vm:2649336kB, anon-rss:961108kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:5084kB oom_score_adj:1000
+Nov 14 12:02:09 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:09 makromak kernel: CPU: 0 UID: 1000 PID: 44353 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:09 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:09 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:09 makromak kernel: Call trace:
+Nov 14 12:02:09 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:09 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:09 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:09 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:09 makromak kernel: [  44349]  1000 44349   662334   111323   111178      145         0  4984832   499358          1000 stress-ng-vm
+Nov 14 12:02:09 makromak kernel: [  44353]  1000 44353   662334   225593   225446      145         2  1961984     7746          1000 stress-ng-vm
+Nov 14 12:02:09 makromak kernel: [  44356]  1000 44356     4283      778      294      484         0    69632        0             0 sleep
+Nov 14 12:02:09 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44349,uid=1000
+Nov 14 12:02:09 makromak kernel: Out of memory: Killed process 44349 (stress-ng-vm) total-vm:2649336kB, anon-rss:444712kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4868kB oom_score_adj:1000
+Nov 14 12:02:11 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:11 makromak kernel: CPU: 0 UID: 1000 PID: 44353 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:11 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:11 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:11 makromak kernel: Call trace:
+Nov 14 12:02:11 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:11 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:11 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:11 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:11 makromak kernel: [  44353]  1000 44353   662334   217680   217535      145         0  4730880   361257          1000 stress-ng-vm
+Nov 14 12:02:11 makromak kernel: [  44357]  1000 44357   662334   118204   118059      145         0  2207744   145853          1000 stress-ng-vm
+Nov 14 12:02:11 makromak kernel: [  44360]  1000 44360     4018      782      295      487         0    77824        0             0 sleep
+Nov 14 12:02:11 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44353,uid=1000
+Nov 14 12:02:11 makromak kernel: Out of memory: Killed process 44353 (stress-ng-vm) total-vm:2649336kB, anon-rss:870140kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4620kB oom_score_adj:1000
+Nov 14 12:02:15 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:15 makromak kernel: CPU: 0 UID: 1000 PID: 44361 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:15 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:15 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:15 makromak kernel: Call trace:
+Nov 14 12:02:15 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:15 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:15 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:15 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:15 makromak kernel: [  44357]  1000 44357   662334    74833    74688      145         0  4608000   488744          1000 stress-ng-vm
+Nov 14 12:02:15 makromak kernel: [  44361]  1000 44361   662334   257013   256868      145         0  2301952    18308          1000 stress-ng-vm
+Nov 14 12:02:15 makromak kernel: [  44362]  1000 44362     2689       53        9       44         0    40960        0             0 date
+Nov 14 12:02:15 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44357,uid=1000
+Nov 14 12:02:15 makromak kernel: Out of memory: Killed process 44357 (stress-ng-vm) total-vm:2649336kB, anon-rss:298752kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4500kB oom_score_adj:1000
+Nov 14 12:02:18 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:18 makromak kernel: CPU: 1 UID: 1000 PID: 44361 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:18 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:18 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:18 makromak kernel: Call trace:
+Nov 14 12:02:18 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:18 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:18 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:18 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:18 makromak kernel: [  44361]  1000 44361   662334   230693   230548      145         0  4968448   377940          1000 stress-ng-vm
+Nov 14 12:02:18 makromak kernel: [  44364]  1000 44364   662334   105619   105474      145         0  1970176   128742          1000 stress-ng-vm
+Nov 14 12:02:18 makromak kernel: [  44365]  1000 44365     4359      487        0      487         0    77824      295             0 sleep
+Nov 14 12:02:18 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44361,uid=1000
+Nov 14 12:02:18 makromak kernel: Out of memory: Killed process 44361 (stress-ng-vm) total-vm:2649336kB, anon-rss:922192kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4852kB oom_score_adj:1000
+Nov 14 12:02:21 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:21 makromak kernel: CPU: 1 UID: 1000 PID: 44364 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:21 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:21 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:21 makromak kernel: Call trace:
+Nov 14 12:02:21 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:21 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:21 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:21 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:21 makromak kernel: [  44364]  1000 44364   662334    49657    49512      145         0  4366336   483712          1000 stress-ng-vm
+Nov 14 12:02:21 makromak kernel: [  44366]  1000 44366   662334   278877   278732      145         0  2514944    23068          1000 stress-ng-vm
+Nov 14 12:02:21 makromak kernel: [  44369]  1000 44369     4459     1105      618      487         0    81920      175             0 sleep
+Nov 14 12:02:21 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44364,uid=1000
+Nov 14 12:02:21 makromak kernel: Out of memory: Killed process 44364 (stress-ng-vm) total-vm:2649336kB, anon-rss:198048kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4264kB oom_score_adj:1000
+Nov 14 12:02:24 makromak kernel: stress-ng-vm invoked oom-killer: gfp_mask=0x440dc0(GFP_KERNEL_ACCOUNT|__GFP_ZERO|__GFP_COMP), order=0, oom_score_adj=1000
+Nov 14 12:02:24 makromak kernel: CPU: 1 UID: 1000 PID: 44366 Comm: stress-ng-vm Tainted: G        W           7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+Nov 14 12:02:24 makromak kernel: Tainted: [W]=WARN
+Nov 14 12:02:24 makromak kernel: Hardware name: QEMU QEMU Virtual Machine, BIOS 0.0.0 02/06/2015
+Nov 14 12:02:24 makromak kernel: Call trace:
+Nov 14 12:02:24 makromak kernel:  show_stack+0x24/0x50 (C)
+Nov 14 12:02:24 makromak kernel:  dump_stack_lvl+0x80/0xc0
+Nov 14 12:02:24 makromak kernel:  dump_stack+0x1c/0x40
+Nov 14 12:02:24 makromak kernel:  dump_header+0x4c/0x1c8
+--
+Nov 14 12:02:24 makromak kernel: [  44366]  1000 44366   662334   279490   279345      145         0  4956160   327607          1000 stress-ng-vm
+Nov 14 12:02:24 makromak kernel: [  44370]  1000 44370   662334    58040    57870      167         3  1994752   179418          1000 stress-ng-vm
+Nov 14 12:02:24 makromak kernel: [  44373]  1000 44373     4062      782      295      487         0    77824        0             0 sleep
+Nov 14 12:02:24 makromak kernel: oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/user.slice/user-1000.slice/session-3.scope,task=stress-ng-vm,pid=44366,uid=1000
+Nov 14 12:02:24 makromak kernel: Out of memory: Killed process 44366 (stress-ng-vm) total-vm:2649336kB, anon-rss:1117380kB, file-rss:580kB, shmem-rss:0kB, UID:1000 pgtables:4840kB oom_score_adj:1000
