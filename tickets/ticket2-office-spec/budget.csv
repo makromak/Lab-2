@@ -1,0 +1,52 @@
+role,component,model,price_kzt,source,date
+accountant,CPU,"Intel Core i3-12100 (LGA1700, 4C/8T, UHD 730), OEM",64800,https://shop.kz/offer/protsessor-intel-core-i3-12100-lga1700-oem/,2026-11-23
+accountant,Motherboard,"Gigabyte B760M DS3H DDR4 (LGA1700, mATX, 4x DDR4)",62990,https://shop.kz/offer/materinskaya-plata-gigabyte-b760m-ds3h-ddr4-lga1700/,2026-11-23
+accountant,Memory,Patriot Signature Line DDR4-3200 2x8 GB (16 GB),61990,https://shop.kz/offer/ddr-4-udimm-16-gb-3200-mhz-patriot-signature-line-2x8gb-kit-box-psd416g3200k/,2026-11-23
+accountant,Storage,Kingston NV3 1 TB M.2 NVMe PCIe 4.0,85990,https://shop.kz/offer/ssd-nakopitel-1-tb-kingston-nv3-m-2-pcie-4-0/,2026-11-23
+accountant,CPU cooler,"ID-Cooling SE-904-XT (123 mm, 180 W TDP, LGA1700/AM5)",7390,https://shop.kz/offer/kuler-id-cooling-se-904-xt-black/,2026-11-23
+accountant,PSU,FSP VIC-550BD 550 W ATX,19990,https://shop.kz/offer/blok-pitaniya-atx-550-w-fsp-vic-550bd/,2026-11-23
+accountant,Case,"DeepCool Matrexx 30 (mATX, GPU ≤250 mm, cooler ≤151 mm)",16200,https://shop.kz/offer/korpus-deepcool-matrexx-30-black/,2026-11-23
+accountant,OS,"Microsoft Windows 11 Professional 64-bit (DVD, retail)",102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-23
+accountant,Monitor 1,"iiyama ProLite XU2493HSU-B7 24"" IPS 1920x1080 100 Hz",65990,https://shop.kz/offer/monitor-24-iiyama-prolite-xu2493hsu-b7-black/,2026-11-23
+accountant,Monitor 2,"iiyama ProLite XU2493HSU-B7 24"" IPS 1920x1080 100 Hz",65990,https://shop.kz/offer/monitor-24-iiyama-prolite-xu2493hsu-b7-black/,2026-11-23
+accountant,Keyboard+mouse,Logitech MK270 wireless keyboard + mouse (USB receiver),14290,https://shop.kz/offer/klaviatura-logitech-mk270-black-usb-mysh/,2026-11-23
+accountant,UPS,CyberPower UTC650E UPS 650 VA,19700,https://shop.kz/offer/istochnik-bespereboynogo-pitaniya-cyberpower-utc650e/,2026-11-23
+accountant,TOTAL,accountant total,588310,,2026-11-23
+sales,CPU,"Intel Core i5-12400 (LGA1700, 6C/12T, UHD 730), OEM",87500,https://shop.kz/offer/protsessor-intel-core-i5-12400-lga1700-oem/,2026-11-23
+sales,Motherboard,"Gigabyte B760M DS3H DDR4 (LGA1700, mATX, 4x DDR4)",62990,https://shop.kz/offer/materinskaya-plata-gigabyte-b760m-ds3h-ddr4-lga1700/,2026-11-23
+sales,Memory,Hiksemi Sword RGB DDR4-3200 2x16 GB (32 GB),139990,https://shop.kz/offer/ddr-4-udimm-32-gb-3200-mhz-hiksemi-sword-rgb-2x-16-gb-kit-box-hsc432u32b5/,2026-11-23
+sales,Storage,Kingston NV3 1 TB M.2 NVMe PCIe 4.0,85990,https://shop.kz/offer/ssd-nakopitel-1-tb-kingston-nv3-m-2-pcie-4-0/,2026-11-23
+sales,CPU cooler,"ID-Cooling SE-904-XT (123 mm, 180 W TDP, LGA1700/AM5)",7390,https://shop.kz/offer/kuler-id-cooling-se-904-xt-black/,2026-11-23
+sales,PSU,FSP VIC-550BD 550 W ATX,19990,https://shop.kz/offer/blok-pitaniya-atx-550-w-fsp-vic-550bd/,2026-11-23
+sales,Case,"DeepCool Matrexx 30 (mATX, GPU ≤250 mm, cooler ≤151 mm)",16200,https://shop.kz/offer/korpus-deepcool-matrexx-30-black/,2026-11-23
+sales,OS,"Microsoft Windows 11 Professional 64-bit (DVD, retail)",102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-23
+sales,Monitor,"iiyama ProLite XU2493HSU-B7 24"" IPS 1920x1080 100 Hz",65990,https://shop.kz/offer/monitor-24-iiyama-prolite-xu2493hsu-b7-black/,2026-11-23
+sales,Keyboard+mouse,Logitech MK270 wireless keyboard + mouse (USB receiver),14290,https://shop.kz/offer/klaviatura-logitech-mk270-black-usb-mysh/,2026-11-23
+sales,Headset,Logitech H390 USB headset,16690,https://shop.kz/offer/garnitura-logitech-h390-black/,2026-11-23
+sales,Webcam,Logitech C270 HD webcam,10990,https://shop.kz/offer/web-kamera-logitech-hd-webcam-c270/,2026-11-23
+sales,TOTAL,sales total,631000,,2026-11-23
+webdev,CPU,"Intel Core i5-14400 (LGA1700, 10C/16T, UHD 730), OEM",90990,https://shop.kz/offer/protsessor-intel-core-i5-14400-lga1700-oem/,2026-11-23
+webdev,Motherboard,"Gigabyte B760M DS3H DDR4 (LGA1700, mATX, 4x DDR4)",62990,https://shop.kz/offer/materinskaya-plata-gigabyte-b760m-ds3h-ddr4-lga1700/,2026-11-23
+webdev,Memory (kit 1 of 2),Hiksemi Sword RGB DDR4-3200 2x16 GB (32 GB),139990,https://shop.kz/offer/ddr-4-udimm-32-gb-3200-mhz-hiksemi-sword-rgb-2x-16-gb-kit-box-hsc432u32b5/,2026-11-23
+webdev,Memory (kit 2 of 2),Hiksemi Sword RGB DDR4-3200 2x16 GB (32 GB),139990,https://shop.kz/offer/ddr-4-udimm-32-gb-3200-mhz-hiksemi-sword-rgb-2x-16-gb-kit-box-hsc432u32b5/,2026-11-23
+webdev,Storage,Kingston NV3 1 TB M.2 NVMe PCIe 4.0,85990,https://shop.kz/offer/ssd-nakopitel-1-tb-kingston-nv3-m-2-pcie-4-0/,2026-11-23
+webdev,CPU cooler,"ID-Cooling SE-904-XT (123 mm, 180 W TDP, LGA1700/AM5)",7390,https://shop.kz/offer/kuler-id-cooling-se-904-xt-black/,2026-11-23
+webdev,PSU,FSP VIC-550BD 550 W ATX,19990,https://shop.kz/offer/blok-pitaniya-atx-550-w-fsp-vic-550bd/,2026-11-23
+webdev,Case,"DeepCool Matrexx 30 (mATX, GPU ≤250 mm, cooler ≤151 mm)",16200,https://shop.kz/offer/korpus-deepcool-matrexx-30-black/,2026-11-23
+webdev,OS,"Ubuntu 24.04 LTS Desktop (free, GPL / Canonical licence)",0,https://ubuntu.com/download/desktop,2026-11-23
+webdev,Monitor,"Xiaomi A27Qi 2026 27"" IPS 2560x1440 120 Hz",84990,https://shop.kz/offer/monitor-27-xiaomi-a27qi-2026-black/,2026-11-23
+webdev,Keyboard+mouse,Logitech MK270 wireless keyboard + mouse (USB receiver),14290,https://shop.kz/offer/klaviatura-logitech-mk270-black-usb-mysh/,2026-11-23
+webdev,TOTAL,webdev total,662810,,2026-11-23
+designer,CPU,"AMD Ryzen 7 7700 (AM5, 8C/16T, Radeon iGPU), OEM",100990,https://shop.kz/offer/protsessor-amd-ryzen-7-7700-am5-oem/,2026-11-23
+designer,Motherboard,"MSI PRO B650M-B (AM5, mATX, 2x DDR5)",54990,https://shop.kz/offer/materinskaya-plata-msi-pro-b650m-b-am5/,2026-11-23
+designer,Memory,AMD Radeon R5 Gamer DDR5-5600 2x16 GB (32 GB),282990,https://shop.kz/offer/ddr-5-dimm-32-gb-5600-mhz-amd-radeon-r5-gamer-2x-16-gb-kit-box-r5s532g5600u1k/,2026-11-23
+designer,Storage,Kingston NV3 1 TB M.2 NVMe PCIe 4.0,85990,https://shop.kz/offer/ssd-nakopitel-1-tb-kingston-nv3-m-2-pcie-4-0/,2026-11-23
+designer,GPU,Palit GeForce RTX 5050 StormX 8 GB (169.9 mm),220990,https://shop.kz/offer/videokarta-palit-rtx-5050-stormx-8-gb-geforse-rtx-5050/,2026-11-23
+designer,CPU cooler,"ID-Cooling SE-904-XT (123 mm, 180 W TDP, LGA1700/AM5)",7390,https://shop.kz/offer/kuler-id-cooling-se-904-xt-black/,2026-11-23
+designer,PSU,MSI MAG A650BN 650 W ATX 80+ Bronze,24590,https://shop.kz/offer/blok-pitaniya-atx-650-w-msi-mag-a650bn/,2026-11-23
+designer,Case,"DeepCool Matrexx 30 (mATX, GPU ≤250 mm, cooler ≤151 mm)",16200,https://shop.kz/offer/korpus-deepcool-matrexx-30-black/,2026-11-23
+designer,OS,"Microsoft Windows 11 Professional 64-bit (DVD, retail)",102990,https://shop.kz/offer/microsoft-windows-11-professional-64-bit-dvd/,2026-11-23
+designer,Monitor,"iiyama ProLite XUB2797QSN-B2 27"" IPS 2560x1440, 99% sRGB, USB-C",135490,https://shop.kz/offer/monitor-27-iiyama-prolite-xub2797qsn-b2-black/,2026-11-23
+designer,Keyboard+mouse,Logitech MK270 wireless keyboard + mouse (USB receiver),14290,https://shop.kz/offer/klaviatura-logitech-mk270-black-usb-mysh/,2026-11-23
+designer,TOTAL,designer total,1046900,,2026-11-23
+ALL,GRAND TOTAL,"4 workstations incl. monitors, OS, peripherals",2929020,,2026-11-23

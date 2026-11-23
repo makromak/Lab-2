@@ -1,0 +1,6 @@
+role,prebuilt_model,prebuilt_price_kzt,my_system_unit_kzt,difference_vs_my_spec,source,date
+accountant,"WW-KZ office PC (Intel Core i3-12100, 16 GB, 512 GB SSD), no OS",266990,319350,"same CPU and memory, but 512 GB SSD instead of 1 TB",https://shop.kz/offer/kompyuter-ofisnyy-ww-kz-intel-core-i3-12100-512-gb-ssd-16-gb/,2026-11-23
+sales,"WW-KZ office PC (Intel Core i5-14400, 16 GB DDR5, 512 GB SSD), no OS",374490,420050,"faster CPU, but 16 GB instead of 32 GB, 512 GB SSD, 400 W PSU",https://shop.kz/offer/kompyuter-ofisnyy-ww-kz-intel-core-i5-14400-512-gb-ssd-16-gb-ddr-5/,2026-11-23
+webdev,"WW-KZ office PC (Intel Core i5-14400, 16 GB DDR5, 512 GB SSD), no OS",374490,563530,"same CPU, but 16 GB instead of 64 GB; going to 64 GB DDR5 costs ~740,000 KZT more",https://shop.kz/offer/kompyuter-ofisnyy-ww-kz-intel-core-i5-14400-512-gb-ssd-16-gb-ddr-5/,2026-11-23
+designer,"WW-KZ gaming PC (AMD Ryzen 5 7500F, RTX 5060 8 GB, 16 GB DDR5, 1 TB SSD), no OS",707790,794130,"stronger GPU, but 6 cores instead of 8 and 16 GB instead of 32 GB",https://shop.kz/offer/kompyuter-igrovoy-ww-kz-amd-ryzen-5-7500f-rtx-5060-8-gb-1-tb-ssd-16-gb-ddr-5/,2026-11-23
+ALL,4 prebuilt units,1723760,2097060,,,2026-11-23
