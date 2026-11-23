@@ -29,7 +29,7 @@
 | # | Title | Folder | Submitted |
 |---|-------|--------|-----------|
 | 1 | VM build document | [tickets/ticket1-vm-build-doc](tickets/ticket1-vm-build-doc) | |
-| 2 | Office hardware specification | [tickets/ticket2-office-spec](tickets/ticket2-office-spec) | |
+| 2 | Office hardware specification | [tickets/ticket2-office-spec](tickets/ticket2-office-spec) | 2026-11-23 (one day late) |
 | 3 | Network fault diagnosis | [tickets/ticket3-network-fault](tickets/ticket3-network-fault) | |
 | 4 | HR staff report script | [tickets/ticket4-hr-csv](tickets/ticket4-hr-csv) | |
 | 5 | Onboarding and offboarding | [tickets/ticket5-onboarding](tickets/ticket5-onboarding) | |
@@ -46,6 +46,7 @@ Week __ — `____` : [tools/____.md](tools/)
 | Lab 3 | Claude (Anthropic) | Reading the makers' pages, taking the screenshots, checking specs and drafting the README; command output is from my own Mac and VM |
 | Lab 4 | Claude (Anthropic) | Explaining each command step by step, drafting the README and uploading the files; I ran every command myself on my own Ubuntu VM and the evidence files are the unedited output |
 | Lab 5 | Claude (Anthropic) | Explaining how to read the hex dump and each command, opening the file in Google Sheets and Numbers for the screenshots, drafting the README and uploading the files; I ran the diagnosis and the fix myself in my Ubuntu VM |
+| Ticket 2 | Claude (Anthropic) | I asked it to do the ticket: it collected the prices on shop.kz and took the price screenshots, checked compatibility, chose the parts and wrote builds.md, budget.csv, prebuilt.csv and README.md |
 
 > Declaring this costs nothing. Not declaring it, when it comes up at the
 > defence, costs the assignment.
